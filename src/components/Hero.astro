@@ -1,0 +1,31 @@
+---
+import Image from '../components/common/Image.astro';
+import heroImage from '../assets/images/hero-event-calendar.png';
+//import { Image } from "astro:assets";
+---
+
+<div class="hero bg-base-200">
+    <div class="hero-content flex-col lg:flex-row-reverse">
+        <Image
+            class="mx-auto rounded-md w-full"
+            widths={[400, 768, 1024, 2040]}
+            sizes="(max-width: 767px) 400px, (max-width: 1023px) 768px, (max-width: 2039px) 1024px, 2040px"
+            loading="eager"
+            width={600}
+            height={460}
+            src={heroImage}
+            alt="Power your events with EventAgile"
+        />
+
+        <div>
+            <h1 class="text-3xl font-bold">easy event management by <span class="text-primary">EventAgile</span></h1>
+            <p class="py-6">
+                Effortlessly organize, promote, and manage your events—all in one place. EventAgile gives you the tools to streamline registrations, track
+                attendance, and engage your audience with ease.
+            </p>
+            <button class="btn btn-primary">Get Started</button>
+
+            <a href="/features" class="btn btn-secondary ml-4">Learn More</a>
+        </div>
+    </div>
+</div>
