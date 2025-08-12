@@ -1,7 +1,7 @@
 import { defineConfig } from 'astro/config';
 import tailwindcss from "@tailwindcss/vite";
 import react from '@astrojs/react';
-import tailwindcss from '@tailwindcss/vite';
+import netlify from '@astrojs/netlify';
 import { responsiveTablesRehypePlugin, lazyImagesRehypePlugin } from './src/utils/frontmatter';
 
 // https://astro.build/config
@@ -10,7 +10,7 @@ export default defineConfig({
         plugins: [tailwindcss()]
     },
     integrations: [react()],
-
+    adapter: netlify(),
 
     markdown: {
 
